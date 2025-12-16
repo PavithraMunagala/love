@@ -303,14 +303,46 @@ font-size: 1.05rem;
     font-size: 14px;
   }
 
-  /* Carousel */
+  /* Carousel */{
+
   .carousel {
     width: 85%;
-    height: 720px;
+    max-width: 1200px;
+    height: 520px;          /* reduced for better vertical balance */
+    margin: 30px auto;
+    border-radius: 24px;
+  }
+
+  .slides {
+    height: 100%;
+    transition: transform 1s ease;
+  }
+
+  .slide {
+    min-width: 100%;
+    height: 100%;
   }
 
   .slide img {
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* perfect for photos */
+  }
+
+  .dots {
+    bottom: 18px;
+    gap: 12px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.45);
+  }
+
+  .dot.active {
+    background: white;
+    transform: scale(1.2);
   }
 
   /* Paragraphs in letters */
